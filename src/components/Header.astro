@@ -1,0 +1,125 @@
+
+<header class="header">
+  <nav class="nav">
+    <a href="/" class="logo">Invexis</a>
+    <ul class="nav-list">
+      <li><a href="productos">PRODUCTOS</a></li>
+      <li><a href="/precios">PRECIOS</a></li>
+      <li><a href="/nosotros">NOSOTROS</a></li>
+	  <li><a href="/recursos">RECURSOS</a></li>
+    </ul>
+  </nav>
+
+  <!--btn inicio sesion y probar gratis -->
+  <div class="btn-box">
+	<a href="/login" class="btn">INICIAR SESIÓN</a>
+	<a href="/crear-cuenta" class="btn">PROBAR GRATIS</a>
+  </div>
+
+</header>
+
+<style>
+
+  .header {
+    background-color: #333;
+	  /*background: transparent;*/
+    padding: 1.5% 6%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0;
+	  align-items: center;
+	  gap: 7rem;
+  }
+
+  .logo {
+    font-size: 35px;
+    text-decoration: none;
+    color: white;
+	  font-family: "Bruno Ace SC", serif;
+  	font-weight: 400;
+  	font-style: normal;
+	  color: #00ff51;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+	  font-family: "Bruno Ace SC", serif;
+  	font-weight: 400;
+  	font-style: normal;
+	  margin-right: 2rem;
+  }
+
+  .nav-list :hover{
+	  color: #00ff51;
+  }
+
+/*btn- box */
+
+  .btn-box{
+	  display: flex;
+	  margin-left: auto;
+  }
+
+  .btn-box .btn{
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  color: white;
+    text-decoration: none;
+    font-size: 15px;
+	  font-family: "Bruno Ace SC", serif;
+  	font-weight: 600;
+  	font-style: normal;
+	  border: 1px solid #00ff51;
+	  border-radius: 1px;
+	  padding: 0.5px;
+	  min-width: 187px;
+	  min-height: 48px;
+	  margin-left: 20px;
+	  transform: skew(-15deg);
+	  z-index: 1;
+	  overflow: hidden;
+	  transition: .10s;
+
+  }
+
+  .btn-box .btn:hover {
+	  color: #00ff51;
+  }
+
+  .btn-box .btn::before{
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 0;
+	  height: 100%;
+	  background: rgb(80, 80, 80);
+	  z-index: -1;
+	  transition: .10s;	
+  }
+
+  .btn-box .btn:hover::before{
+	  width: 100%;
+  }
+</style>

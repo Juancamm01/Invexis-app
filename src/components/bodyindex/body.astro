@@ -1,0 +1,481 @@
+---
+
+import ChangeableText from "../bodyindex/ChangeableText"
+
+---
+
+<section class="home" id="Home">
+    <div class="home-container">
+        <div class="home-content">
+            <h1>software para restaurantes, bares, y café</h1>
+            <h2 class="text2">Encárgate del inventario.</h2>
+            <h3>Invexis resuelve</h3>
+            <h4 class="text4"> <ChangeableText client:load /></h4>
+            <h5>Potencia tu negocio</h5>
+            <h6> $ 30.000 por mes.</h6>
+        </div>
+        <img class= "chpc" src="/public/pcperson.jpg"/>
+    </div>
+ </section>
+
+<section class="home_segunda" id="Home_segunda">
+    <div class="home2-container">
+        <div class="home2-content">
+            <h1>El Software para restaurantes</h1>
+            <h2>todo en uno</h2>
+            <h3>Potencia la operación de tu negocio, toma el control y aumenta las ventas</h3>
+            <!--btn de como funciona  -->
+            <div class="btn-box">
+                <a href="Funciona" class="btn">¿Como funciona?</a>
+            </div>
+        </div>
+       
+        <img class= "chipccel" src="/public/chicapcycel.jpg">
+    </div>
+</section>
+
+<section class="home_tercera" id="Home_tercera">
+    <div class="home3-container">
+        <div class="home3-content">
+            <h1>Diferentes pantallas, mismo software</h1>
+            <h2>Con Invexis puedes visualizar en tiempo real la operación en tu restaurante, lo que te permite tomar decisiones estratégicas estés donde estés.</h2>
+            <!--btn de como funciona  -->
+            <div class="btn-box-segundo">
+                <a href="funcionalidades" class="btn-segundo">Conoce todas las funcionalidades</a>
+            </div>
+        </div>
+       
+        <img class= "variaspantallas" src="/public/variaspantallas.jpg">
+    </div>
+</section>
+
+
+<section class="home_cuarta" id="Home_cuarta">
+    <div class="home4-container">
+        <div class="home4-content">
+            <h1>Ventajas</h1>
+            <h2>Un sistema de vanguardia</h2>
+        </div>
+    </div>
+
+    <div class="target-cards-container">
+        <div class="target-card">
+          <img src="/public/Imagen 1.svg" alt="Imagen 1" class="target-card-img">
+          <div class="target-card-content">
+            <h3>Simple y moderno</h3>
+            <p>Ofrecemos una interfaz moderna, amigable y fácil de usar.</p>
+          </div>
+        </div>
+      
+        <div class="target-card">
+          <img src="/public/Imagen 2.svg" alt="Imagen 2" class="target-card-img">
+          <div class="target-card-content">
+            <h3>Fexible</h3>
+            <p>No exigimos ningún hardware especializado. Fudo funciona en cualquier dispositivo con Windows, MAC o Linux.</p>
+          </div>
+        </div>
+      
+        <div class="target-card">
+          <img src="/public/Imagen 3.svg" alt="Imagen 3" class="target-card-img">
+          <div class="target-card-content">
+            <h3>On-line</h3>
+            <p>¡No tienes que instalar ningún programa! Ingresa desde cualquier lugar, en cualquier momento y mediante cualquier dispositivo.</p>
+          </div>
+        </div>
+    </div>
+ </section>
+
+
+<style>
+    
+
+    section {
+        min-height: auto;
+    }
+
+    .home {
+        align-items: center;
+        padding: 0% 6%;
+    }
+
+    .home-container {
+        display: flex; /* Activa Flexbox */
+        align-items: center; /* Alinea verticalmente el texto con la imagen */
+        gap: 0px; /* Espacio entre el texto y la imagen */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    }
+
+    .home-content {
+        max-width: 50%; /* Limita el ancho del texto */
+        flex: 1; /* Permite que el texto ocupe el espacio disponible */
+    }
+
+    .home-content h1 {
+        color: #ffff;
+        opacity: .8;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.5;
+        text-transform: uppercase;
+        max-width: 258px;
+        margin: 25px 0;
+        margin-block-start: 25px;
+        margin-block-end: 25px;
+
+    }
+
+    .home-content .text2 {
+        color: #00ff51;
+    }
+
+    .home-content h2 {
+        font-size:50px;
+        font-weight: 700;
+        line-height: 1.2;
+        max-width: 396px;
+        margin-bottom: 6px;
+        margin: 12px 0;
+        margin-block-start: 12px;
+        margin-block-end: 6px;
+    }
+
+    .home-content h3 {
+        font-size:50px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 6px;
+        margin: 12px 0;
+        margin-block-start: 12px;
+        margin-block-end: 6px;
+    }
+
+    .home-content h4 {
+        font-size:50px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 6px;
+        margin: 12px 0;
+        margin-block-start: 12px;
+        margin-block-end: 6px;
+        color: #ffff;
+        text-decoration: underline;
+        text-decoration-color: #00ff51 ;
+    }
+
+    .home-content h5 {
+        font-size:30px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 6px;
+        margin-top: 20px;
+    }
+
+    .home-content h6 {
+        font-size:25px;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 6px;
+        margin: 20px 0px;
+    }
+    
+    .chpc {
+        max-width: 35%; /* La imagen ocupa un 40% del ancho disponible */
+        height: auto;
+        border-radius: 10px;
+        object-fit: contain;
+        margin: 70px 0px;
+    }
+
+    /* segunda parte*/
+
+    .home_segunda {
+        background: #f9f9f9;
+        align-items: center;
+        padding: 0% 6%;
+    }
+    
+
+    .home2-container {
+        display: flex; /* Activa Flexbox */
+        displey-direction: row-reverse;
+        align-items: center; /* Alinea verticalmente el texto con la imagen */
+        gap: 0px; /* Espacio entre el texto y la imagen */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    }
+
+    .home2-content {
+        order: 2; /* Se muestra después */
+    }
+
+    .home2-content h1 {
+        color: #333;
+        font-size:50px;
+        font-weight: 700;
+        line-height: 1.2;
+        max-width: 396px;
+        margin-bottom: 6px;
+        margin: 12px 0;
+        margin-block-start: 12px;
+        margin-block-end: 6px;
+    }
+
+    .home2-content h2 {
+        color: #00ff51;
+        font-size:50px;
+        font-weight: 600;
+        line-height: 1.2;
+        max-width: 396px;
+        margin-bottom: 6px;
+        margin: 12px 0;
+        margin-block-start: 12px;
+        margin-block-end: 6px;
+    }
+
+    .home2-content h3 {
+        color: black;
+        font-size:20px;
+        font-weight: 600;
+        line-height: 1.2;
+        max-width: 396px;
+        margin-bottom: 6px;
+        margin: 12px 0;
+        margin-block-start: 12px;
+        margin-block-end: 6px;
+    }
+
+    .btn-box{
+	    display: flex;
+	    margin-left: auto;
+        order: 3;
+        margin-top: 5%;
+    }
+
+    .btn-box .btn{
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	color: white;
+        text-decoration: none;
+        font-size: 15px;
+    	font-family: "Bruno Ace SC", serif;
+    	font-weight: 600;
+    	font-style: normal;
+    	border: 1px solid #00ff51;
+    	border-radius: 1px;
+    	padding: 0.5px;
+    	min-width: 187px;
+    	min-height: 48px;
+    	margin-left: 20px;
+    	transform: skew(-15deg);
+    	z-index: 1;
+    	overflow: hidden;
+    	transition: .10s;
+        background-color: rgb(80, 80, 80);
+    }
+
+    .btn-box .btn:hover {
+        color: #00ff51;
+    }
+
+    .btn-box .btn::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: white;
+        z-index: -1;
+        transition: .10s;	
+    }
+
+    .btn-box .btn:hover::before{
+        width: 100%;
+    }
+
+    .chipccel {
+        max-width: 50%; /* La imagen ocupa un 40% del ancho disponible */
+        order: 1; /* Se muestra primero */
+        height: auto;
+        border-radius: 50px;
+        object-fit: contain;
+        margin: 70px 50px;
+
+    }
+
+    /*tercera parte*/
+
+    .home_tercera {
+        background: rgb(80, 250, 131);
+        align-items: center;
+        padding: 0% 6%;
+    }
+    
+
+    .home3-container {
+        display: flex; /* Activa Flexbox */
+        displey-direction: row-reverse;
+        align-items: center; /* Alinea verticalmente el texto con la imagen */
+        gap: 0px; /* Espacio entre el texto y la imagen */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    }
+
+    .home3-content {
+        order: 1; /* Se muestra después */
+    }
+
+    .home3-content h1 {
+        color: #333;
+        font-size:50px;
+        font-weight: 700;
+        line-height: 1.2;
+        max-width: 396px;
+        margin-bottom: 6px;
+        margin: 12px 0;
+        margin-block-start: 12px;
+        margin-block-end: 6px;
+    }
+
+    .variaspantallas {
+        max-width: 50%; /* La imagen ocupa un 40% del ancho disponible */
+        order: 2; /* Se muestra primero */
+        height: auto;
+        border-radius: 50px;
+        object-fit: contain;
+        margin: 70px 50px;
+
+    }
+
+    .btn-box-segundo{
+	    display: flex;
+	    margin-left: auto;
+        order: 3;
+        margin-top: 5%;
+    }
+
+    .btn-box-segundo .btn-segundo{
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	color: white;
+        text-decoration: none;
+        font-size: 15px;
+    	font-family: "Bruno Ace SC", serif;
+    	font-weight: 600;
+    	font-style: normal;
+    	border: 1px solid #00ff51;
+    	border-radius: 1px;
+    	padding: 0.5px;
+    	min-width: 187px;
+    	min-height: 48px;
+    	margin-left: 20px;
+    	transform: skew(-15deg);
+    	z-index: 1;
+    	overflow: hidden;
+    	transition: .10s;
+        background-color: rgb(80, 80, 80);
+    }
+
+    .btn-box-segundo .btn-segundo:hover {
+        color: #00ff51;
+    }
+
+    .btn-box-segundo .btn-segundo::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: white;
+        z-index: -1;
+        transition: .10s;	
+    }
+
+    .btn-box-segundo .btn-segundo:hover::before{
+        width: 100%;
+    }
+
+    /*cuarta parte */
+
+    .home_cuarta {
+        background: #f9f9f9;
+        align-items: center;
+        padding: 0% 6%;
+    }
+    
+
+    .home4-container {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center;     /* Centra verticalmente */
+        flex-direction: column;  /* Si quieres que los elementos se apilen verticalmente */
+    }
+
+    .home4-content {
+        text-align: center;
+    }
+
+
+    .home4-content h1 {
+        color: #333;
+        font-size:20px;
+        font-weight: 300;
+        
+    }
+
+    .home4-content h2 {
+        color: #333;
+        font-size:30px;
+        font-weight: 800;
+    }
+
+    .target-cards-container {
+      display: flex;
+      flex-wrap: wrap;       /* Permite que se acomoden en varias filas en pantallas pequeñas */
+      gap: 20px;             /* Espacio entre tarjetas */
+      justify-content: center;
+      padding: 20px;
+      background: #f9f9f9;   /* Fondo opcional */
+    }
+    
+    /* Cada tarjeta */
+    .target-card {
+      display: flex;               /* Layout horizontal: imagen a la izquierda y contenido a la derecha */
+      align-items: center;
+      width: 300px;                /* Ancho fijo, puedes ajustar según necesites */
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex-direction: column;
+    }
+    
+    /* Imagen de la tarjeta */
+    .target-card-img {
+      width: 100px;                /* Tamaño de la imagen */
+      height: 100px;               /* Puedes ajustarlo para que se vea bien */
+      object-fit: cover;           /* Mantiene la proporción, recortando si es necesario */
+    }
+    
+    /* Contenido de la tarjeta */
+    .target-card-content {
+      padding: 10px;
+    }
+    
+    .target-card-content h3 {
+      margin: 0 0 5px;
+      font-size: 18px;
+      color: #333;
+      text-align: center;
+    }
+    
+    .target-card-content p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+
+</style>

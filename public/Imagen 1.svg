@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="142" height="123" viewBox="0 0 142 123">
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#428DF1" stroke-linecap="round" stroke-width="3" d="M50.568 121H19.18C9.692 121 2 112.353 2 101.686V21.314C2 10.647 9.692 2 19.18 2h103.64C132.307 2 140 10.647 140 21.314v32.681" opacity=".25"/>
+        <g transform="translate(17 28)">
+            <path stroke="#428DF1" stroke-linejoin="round" stroke-width="1.44" d="M12.866 0H94.51c2.636 0 4.776 2.116 4.784 4.733v57.96H8.082V4.734C8.091 2.116 10.23 0 12.866 0z"/>
+            <path stroke="#428DF1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.44" d="M13.085 4.735h35.407M94.527 28.671v34.023M59.269 4.927h33.746c.94.001 1.703.772 1.705 1.722v3.63"/>
+            <path stroke="#428DF1" stroke-linejoin="round" stroke-width="1.44" d="M0 62.694h107.376c0 4.011-3.223 7.263-7.2 7.263H7.2c-3.977 0-7.2-3.252-7.2-7.263z"/>
+            <ellipse cx="53.688" cy="4.735" fill="#428DF1" fill-rule="nonzero" rx="1" ry="1"/>
+            <path stroke="#428DF1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.44" d="M12.464 25.995v36.699"/>
+            <rect width="13.135" height="13.041" x="21.892" y="11.355" fill="#9B9B9B" opacity=".15" rx=".96"/>
+            <rect width="13.135" height="13.041" x="21.892" y="27.293" fill="#428DF1" opacity=".2" rx=".96"/>
+            <rect width="13.135" height="13.041" x="21.892" y="43.232" fill="#9B9B9B" opacity=".15" rx=".96"/>
+            <rect width="13.135" height="13.041" x="37.946" y="11.355" fill="#428DF1" opacity=".2" rx=".96"/>
+            <rect width="13.135" height="13.041" x="37.946" y="27.293" fill="#9B9B9B" opacity=".15" rx=".96"/>
+            <rect width="13.135" height="13.041" x="37.946" y="43.232" fill="#9B9B9B" opacity=".15" rx=".96"/>
+            <rect width="13.135" height="13.041" x="54" y="11.355" fill="#9B9B9B" opacity=".15" rx=".96"/>
+            <rect width="13.135" height="13.041" x="54" y="27.293" fill="#428DF1" opacity=".2" rx=".96"/>
+            <rect width="13.135" height="13.041" x="54" y="43.232" fill="#428DF1" opacity=".2" rx=".96"/>
+            <rect width="13.135" height="13.041" x="70.054" y="11.355" fill="#9B9B9B" opacity=".15" rx=".96"/>
+            <rect width="13.135" height="13.041" x="70.054" y="27.293" fill="#9B9B9B" opacity=".15" rx=".96"/>
+            <rect width="13.135" height="13.041" x="70.054" y="43.232" fill="#428DF1" opacity=".2" rx=".96"/>
+            <rect width="11.695" height="11.601" x="21.152" y="26.564" stroke="#428DF1" stroke-width="1.44" rx=".96"/>
+            <rect width="11.695" height="11.601" x="37.206" y="10.626" stroke="#428DF1" stroke-width="1.44" rx=".96"/>
+            <rect width="11.695" height="11.601" x="53.261" y="26.564" stroke="#428DF1" stroke-width="1.44" rx=".96"/>
+            <rect width="11.695" height="11.601" x="53.261" y="42.503" stroke="#428DF1" stroke-width="1.44" rx=".96"/>
+            <rect width="11.695" height="11.601" x="69.315" y="42.503" stroke="#428DF1" stroke-width="1.44" rx=".96"/>
+        </g>
+    </g>
+</svg>
