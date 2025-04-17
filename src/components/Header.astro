@@ -1,19 +1,22 @@
-
 <header class="header">
-  <nav class="nav">
-    <a href="/" class="logo">Invexis</a>
-    <ul class="nav-list">
-      <li><a href="productos">PRODUCTOS</a></li>
-      <li><a href="/precios">PRECIOS</a></li>
-      <li><a href="/nosotros">NOSOTROS</a></li>
-	  <li><a href="/recursos">RECURSOS</a></li>
-    </ul>
-  </nav>
+  <div class="header-main">
+    <nav class="nav">
+      <a href="/" class="logo">Invexis</a>
+      <ul class="nav-list">
+        <li><a href="productos">PRODUCTOS</a></li>
+        <li><a href="/precios">PRECIOS</a></li>
+        <li><a href="/nosotros">NOSOTROS</a></li>
+        <li><a href="/recursos">RECURSOS</a></li>
+      </ul>
+    </nav>
+  </div>
 
   <!--btn inicio sesion y probar gratis -->
-  <div class="btn-box">
-	<a href="/login" class="btn">INICIAR SESIÓN</a>
-	<a href="/crear-cuenta" class="btn">PROBAR GRATIS</a>
+  <div class="btn-container">
+    <div class="btn-box">
+      <a href="/crear-cuenta" class="btn btn-primary">PROBAR GRATIS</a>
+      <a href="/login" class="btn btn-secondary">INICIAR SESIÓN</a>
+    </div>
   </div>
 
 </header>
@@ -21,105 +24,135 @@
 <style>
 
   .header {
-    background-color: #333;
-	  /*background: transparent;*/
-    padding: 1.5% 6%;
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-between;
+    /* background-color: #212121; */ /* REMOVED - Moved to inner elements */
+    /* padding: 5px 10px; */ /* REMOVED - Header is just container */
+    padding: 0; /* No padding needed for the container itself */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: sticky;
     z-index: 1000;
-    top: 0;
+    top: 15px; /* Add space from the top */
+    gap: 15px; /* Space between main content and buttons */
+    margin: 15px 25px; /* Add top/bottom and left/right margins */
+    /* border-radius: 50px; */ /* REMOVED - Rounding is on inner elements */
+    width: calc(100% - 50px); /* Adjust width considering left/right margins */
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */ /* REMOVED - Moved to inner elements */
+  }
+
+  .header-main {
+    background-color: #212121; /* Has its own background */
+    padding: 5px 25px; /* Padding inside the main bar */
+    border-radius: 50px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allow it to take available space */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+    min-height: 50px; /* Match .btn-container height */
   }
 
   .nav {
     display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0;
-	  align-items: center;
-	  gap: 7rem;
+    align-items: center;
+    width: 100%;
+    gap: 3rem; /* Adjust gap between logo and nav list */
   }
 
   .logo {
     font-size: 35px;
     text-decoration: none;
-    color: white;
-	  font-family: "Bruno Ace SC", serif;
-  	font-weight: 400;
-  	font-style: normal;
-	  color: #00ff51;
+    color: #00ff51; /* Original color */
+    font-family: "Arial Black", sans-serif; /* Bold sans-serif, approximation */
+    font-weight: 900;
+    white-space: nowrap; /* Prevent wrapping */
   }
 
   .nav-list {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem; /* Adjusted gap */
     list-style: none;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
+    margin-left: auto; /* Push links to the right */
   }
 
   .nav-list a {
-    color: white;
+    /* color: white; */ /* Original color */
+    color: #E0E0E0; /* Light gray/off-white from image */
     text-decoration: none;
-    font-size: 15px;
-	  font-family: "Bruno Ace SC", serif;
-  	font-weight: 400;
-  	font-style: normal;
-	  margin-right: 2rem;
+    font-size: 14px; /* Slightly smaller */
+    font-family: Arial, sans-serif; /* Standard sans-serif */
+    font-weight: 500; /* Regular weight */
+    transition: color 0.2s ease;
+    white-space: nowrap; /* Prevent wrapping */
   }
 
-  .nav-list :hover{
-	  color: #00ff51;
+  .nav-list a:hover {
+    /* color: #00ff51; */ /* Original hover */
+    color: white; /* Simple white hover */
   }
 
-/*btn- box */
-
-  .btn-box{
-	  display: flex;
-	  margin-left: auto;
+  /* Button container */
+  .btn-container {
+      background-color: #212121; /* Has its own background */
+      padding: 5px 10px; /* Padding inside the button container */
+      border-radius: 50px; /* Rounded corners */
+      display: inline-flex; /* Fit content size */
+      align-items: center; /* Ensure vertical alignment if height changes */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+      min-height: 50px; /* Enforce minimum height */
   }
 
-  .btn-box .btn{
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  color: white;
+  .btn-box {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between buttons */
+  }
+
+  .btn-box .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    font-size: 15px;
-	  font-family: "Bruno Ace SC", serif;
-  	font-weight: 600;
-  	font-style: normal;
-	  border: 1px solid #00ff51;
-	  border-radius: 1px;
-	  padding: 0.5px;
-	  min-width: 187px;
-	  min-height: 48px;
-	  margin-left: 20px;
-	  transform: skew(-15deg);
-	  z-index: 1;
-	  overflow: hidden;
-	  transition: .10s;
-
+    font-size: 14px; /* Match nav links */
+    font-family: Arial, sans-serif; /* Standard sans-serif */
+    font-weight: 600; /* Slightly bolder */
+    border: none; /* Remove original border */
+    border-radius: 50px; /* Fully rounded buttons */
+    padding: 10px 20px; /* Button padding */
+    min-width: auto; /* Remove fixed width */
+    min-height: auto; /* Remove fixed height */
+    transform: none; /* Remove skew */
+    z-index: 1;
+    overflow: hidden;
+    transition: background-color 0.2s ease, color 0.2s ease; /* Smooth transition */
+    white-space: nowrap; /* Prevent wrapping */
+    cursor: pointer;
   }
 
-  .btn-box .btn:hover {
-	  color: #00ff51;
+  .btn-box .btn.btn-primary { /* Corresponds to "Agenda una demo" style */
+      background-color: #FF5A47; /* Red/Orange background */
+      color: white;
   }
 
-  .btn-box .btn::before{
-	  content: '';
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  width: 0;
-	  height: 100%;
-	  background: rgb(80, 80, 80);
-	  z-index: -1;
-	  transition: .10s;	
+  .btn-box .btn.btn-primary:hover {
+      background-color: #E54F3B; /* Darker shade on hover */
+      color: white;
   }
 
-  .btn-box .btn:hover::before{
-	  width: 100%;
+  .btn-box .btn.btn-secondary { /* Corresponds to "Soy Toteat" style */
+      background-color: #EAE5D9; /* Beige background */
+      color: #333333; /* Dark text */
   }
+
+   .btn-box .btn.btn-secondary:hover {
+      background-color: #DCD7CD; /* Darker beige on hover */
+      color: #333333;
+  }
+
+  /* Remove pseudo-element effects from original style */
+  .btn-box .btn::before {
+    display: none;
+  }
+
 </style>

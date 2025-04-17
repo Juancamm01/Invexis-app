@@ -14,7 +14,7 @@ import ChangeableText from "../bodyindex/ChangeableText"
             <h5>Potencia tu negocio</h5>
             <h6> $ 30.000 por mes.</h6>
         </div>
-        <img class= "chpc" src="/public/pcperson.jpg"/>
+        <img class= "chpc" src="/pcperson.jpg"/>
     </div>
  </section>
 
@@ -30,7 +30,7 @@ import ChangeableText from "../bodyindex/ChangeableText"
             </div>
         </div>
        
-        <img class= "chipccel" src="/public/chicapcycel.jpg">
+        <img class= "chipccel" src="/chicapcycel.jpg">
     </div>
 </section>
 
@@ -45,7 +45,7 @@ import ChangeableText from "../bodyindex/ChangeableText"
             </div>
         </div>
        
-        <img class= "variaspantallas" src="/public/variaspantallas.jpg">
+        <img class= "variaspantallas" src="/variaspantallas.jpg">
     </div>
 </section>
 
@@ -60,7 +60,7 @@ import ChangeableText from "../bodyindex/ChangeableText"
 
     <div class="target-cards-container">
         <div class="target-card">
-          <img src="/public/Imagen 1.svg" alt="Imagen 1" class="target-card-img">
+          <img src="/Imagen 1.svg" alt="Imagen 1" class="target-card-img">
           <div class="target-card-content">
             <h3>Simple y moderno</h3>
             <p>Ofrecemos una interfaz moderna, amigable y fácil de usar.</p>
@@ -68,7 +68,7 @@ import ChangeableText from "../bodyindex/ChangeableText"
         </div>
       
         <div class="target-card">
-          <img src="/public/Imagen 2.svg" alt="Imagen 2" class="target-card-img">
+          <img src="/Imagen 2.svg" alt="Imagen 2" class="target-card-img">
           <div class="target-card-content">
             <h3>Fexible</h3>
             <p>No exigimos ningún hardware especializado. Fudo funciona en cualquier dispositivo con Windows, MAC o Linux.</p>
@@ -76,7 +76,7 @@ import ChangeableText from "../bodyindex/ChangeableText"
         </div>
       
         <div class="target-card">
-          <img src="/public/Imagen 3.svg" alt="Imagen 3" class="target-card-img">
+          <img src="/Imagen 3.svg" alt="Imagen 3" class="target-card-img">
           <div class="target-card-content">
             <h3>On-line</h3>
             <p>¡No tienes que instalar ningún programa! Ingresa desde cualquier lugar, en cualquier momento y mediante cualquier dispositivo.</p>
@@ -357,31 +357,47 @@ import ChangeableText from "../bodyindex/ChangeableText"
     	display: flex;
     	justify-content: center;
     	align-items: center;
-    	color: white;
+    	/* color: white; */ /* Match .btn */
+        color: white; /* Keep white text from .btn colors */
         text-decoration: none;
-        font-size: 15px;
-    	font-family: "Bruno Ace SC", serif;
+        /* font-size: 15px; */ /* Match .btn */
+        font-size: 14px; /* Restore style from beige button */
+    	/* font-family: "Bruno Ace SC", serif; */ /* Match .btn */
+        font-family: Arial, sans-serif; /* Restore style from beige button */
     	font-weight: 600;
-    	font-style: normal;
-    	border: 1px solid #00ff51;
-    	border-radius: 1px;
-    	padding: 0.5px;
-    	min-width: 187px;
-    	min-height: 48px;
-    	margin-left: 20px;
-    	transform: skew(-15deg);
+    	/* font-style: normal; */ /* Match .btn */
+    	/* border: 1px solid #00ff51; */ /* Match .btn */
+        border: none; /* Restore style from beige button */
+    	/* border-radius: 1px; */ /* Match .btn */
+        border-radius: 50px; /* Restore style from beige button */
+    	/* padding: 0.5px; */ /* Match .btn */
+        padding: 10px 30px; /* Increased horizontal padding */
+    	/* min-width: 187px; */ /* Match .btn */
+        min-width: auto; /* Restore style from beige button */
+    	/* min-height: 48px; */ /* Match .btn */
+        min-height: auto; /* Restore style from beige button */
+    	margin-left: 20px; /* Keep margin */
+    	/* transform: skew(-15deg); */ /* Match .btn */
+        transform: none; /* Restore style from beige button */
     	z-index: 1;
     	overflow: hidden;
-    	transition: .10s;
-        background-color: rgb(80, 80, 80);
+    	/* transition: .10s; */ /* Match .btn */
+        transition: background-color 0.2s ease; /* Simpler transition for color change */
+        /* background-color: rgb(80, 80, 80); */ /* Match .btn */
+        background-color: rgb(80, 80, 80); /* Keep gray background from .btn colors */
+        cursor: pointer;
     }
 
     .btn-box-segundo .btn-segundo:hover {
-        color: #00ff51;
+        /* color: #00ff51; */ /* Match .btn:hover */
+        /* background-color: rgb(80, 80, 80); */ /* Ensure background doesn't change on hover */
+        color: white; /* Keep text white on hover */
+        background-color: rgb(60, 60, 60); /* Slightly darker gray on hover */
     }
 
+    /* Ensure pseudo-element effect is removed */
     .btn-box-segundo .btn-segundo::before{
-        content: '';
+        /* content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -389,11 +405,13 @@ import ChangeableText from "../bodyindex/ChangeableText"
         height: 100%;
         background: white;
         z-index: -1;
-        transition: .10s;	
+        transition: .10s; */
+        display: none;
     }
 
     .btn-box-segundo .btn-segundo:hover::before{
-        width: 100%;
+        /* width: 100%; */ /* Match .btn:hover::before */
+        display: none;
     }
 
     /*cuarta parte */
@@ -457,6 +475,11 @@ import ChangeableText from "../bodyindex/ChangeableText"
       width: 100px;                /* Tamaño de la imagen */
       height: 100px;               /* Puedes ajustarlo para que se vea bien */
       object-fit: cover;           /* Mantiene la proporción, recortando si es necesario */
+      display: block; /* Asegura que se pueda centrar con márgenes automáticos */
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px; /* Añade margen superior */
+      margin-bottom: 10px; /* Añade margen inferior */
     }
     
     /* Contenido de la tarjeta */
