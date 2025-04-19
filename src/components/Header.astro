@@ -24,89 +24,89 @@
 <style>
 
   .header {
-    /* background-color: #212121; */ /* REMOVED - Moved to inner elements */
-    /* padding: 5px 10px; */ /* REMOVED - Header is just container */
-    padding: 0; /* No padding needed for the container itself */
+    /* background-color: #212121; */ /* ELIMINADO - Movido a elementos internos */
+    /* padding: 5px 10px; */ /* ELIMINADO - Header es solo contenedor */
+    padding: 0; /* No se necesita padding para el contenedor */
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
     z-index: 1000;
-    top: 15px; /* Add space from the top */
-    gap: 15px; /* Space between main content and buttons */
-    margin: 15px 25px; /* Add top/bottom and left/right margins */
-    /* border-radius: 50px; */ /* REMOVED - Rounding is on inner elements */
-    width: calc(100% - 50px); /* Adjust width considering left/right margins */
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */ /* REMOVED - Moved to inner elements */
+    top: 15px; /* Añadir espacio desde arriba */
+    gap: 15px; /* Espacio entre contenido principal y botones */
+    margin: 15px 25px; /* Añadir márgenes superior/inferior e izquierdo/derecho */
+    /* border-radius: 50px; */ /* ELIMINADO - Redondeo en elementos internos */
+    width: calc(100% - 50px); /* Ajustar ancho considerando márgenes izq/der */
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */ /* ELIMINADO - Movido a elementos internos */
   }
 
   .header-main {
-    background-color: #212121; /* Has its own background */
-    padding: 5px 25px; /* Padding inside the main bar */
-    border-radius: 50px; /* Rounded corners */
+    background-color: #212121; /* Tiene su propio fondo */
+    padding: 5px 25px; /* Padding dentro de la barra principal */
+    border-radius: 50px; /* Esquinas redondeadas */
     display: flex;
     align-items: center;
-    flex-grow: 1; /* Allow it to take available space */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
-    min-height: 50px; /* Match .btn-container height */
+    flex-grow: 1; /* Permitir que ocupe el espacio disponible */
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */ /* Añadir sombra */
+    min-height: 50px; /* Igualar altura de .btn-container */
   }
 
   .nav {
     display: flex;
     align-items: center;
     width: 100%;
-    gap: 3rem; /* Adjust gap between logo and nav list */
+    gap: 3rem; /* Ajustar espacio entre logo y lista de navegación */
   }
 
   .logo {
     font-size: 35px;
     text-decoration: none;
-    color: #00ff51; /* Original color */
-    font-family: "Arial Black", sans-serif; /* Bold sans-serif, approximation */
+    color: #00ff51; /* Color original */
+    font-family: "Arial Black", sans-serif; /* Sans-serif negrita, aproximación */
     font-weight: 900;
-    white-space: nowrap; /* Prevent wrapping */
+    white-space: nowrap; /* Evitar salto de línea */
   }
 
   .nav-list {
     display: flex;
-    gap: 1.5rem; /* Adjusted gap */
+    gap: 1.5rem; /* Espacio ajustado */
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: auto; /* Push links to the right */
+    margin-left: auto; /* Empujar enlaces a la derecha */
   }
 
   .nav-list a {
-    /* color: white; */ /* Original color */
-    color: #E0E0E0; /* Light gray/off-white from image */
+    /* color: white; */ /* Color original */
+    color: #E0E0E0; /* Gris claro/blanco roto de la imagen */
     text-decoration: none;
-    font-size: 14px; /* Slightly smaller */
-    font-family: Arial, sans-serif; /* Standard sans-serif */
-    font-weight: 500; /* Regular weight */
+    font-size: 14px; /* Ligeramente más pequeño */
+    font-family: Arial, sans-serif; /* Sans-serif estándar */
+    font-weight: 500; /* Peso regular */
     transition: color 0.2s ease;
-    white-space: nowrap; /* Prevent wrapping */
+    white-space: nowrap; /* Evitar salto de línea */
   }
 
   .nav-list a:hover {
-    /* color: #00ff51; */ /* Original hover */
-    color: white; /* Simple white hover */
+    /* color: #00ff51; */ /* Hover original */
+    color: white; /* Hover blanco simple */
   }
 
-  /* Button container */
+  /* Contenedor de botones */
   .btn-container {
-      background-color: #212121; /* Has its own background */
-      padding: 5px 10px; /* Padding inside the button container */
-      border-radius: 50px; /* Rounded corners */
-      display: inline-flex; /* Fit content size */
-      align-items: center; /* Ensure vertical alignment if height changes */
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
-      min-height: 50px; /* Enforce minimum height */
+      background-color: #212121; /* Tiene su propio fondo */
+      padding: 5px 10px; /* Padding dentro del contenedor de botones */
+      border-radius: 50px; /* Esquinas redondeadas */
+      display: inline-flex; /* Ajustar al tamaño del contenido */
+      align-items: center; /* Asegurar alineación vertical si la altura cambia */
+      /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */ /* Añadir sombra */
+      min-height: 50px; /* Forzar altura mínima */
   }
 
   .btn-box {
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between buttons */
+    gap: 10px; /* Espacio entre botones */
   }
 
   .btn-box .btn {
@@ -114,43 +114,43 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 14px; /* Match nav links */
-    font-family: Arial, sans-serif; /* Standard sans-serif */
-    font-weight: 600; /* Slightly bolder */
-    border: none; /* Remove original border */
-    border-radius: 50px; /* Fully rounded buttons */
-    padding: 10px 20px; /* Button padding */
-    min-width: auto; /* Remove fixed width */
-    min-height: auto; /* Remove fixed height */
-    transform: none; /* Remove skew */
+    font-size: 14px; /* Igualar enlaces de nav */
+    font-family: Arial, sans-serif; /* Sans-serif estándar */
+    font-weight: 600; /* Ligeramente más negrita */
+    border: none; /* Quitar borde original */
+    border-radius: 50px; /* Botones completamente redondeados */
+    padding: 10px 20px; /* Padding del botón */
+    min-width: auto; /* Quitar ancho fijo */
+    min-height: auto; /* Quitar altura fija */
+    transform: none; /* Quitar inclinación */
     z-index: 1;
     overflow: hidden;
-    transition: background-color 0.2s ease, color 0.2s ease; /* Smooth transition */
-    white-space: nowrap; /* Prevent wrapping */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Transición suave */
+    white-space: nowrap; /* Evitar salto de línea */
     cursor: pointer;
   }
 
-  .btn-box .btn.btn-primary { /* Corresponds to "Agenda una demo" style */
-      background-color: #FF5A47; /* Red/Orange background */
+  .btn-box .btn.btn-primary { /* Corresponde al estilo "PROBAR GRATIS" */
+      background-color: #FF5A47; /* Fondo Rojo/Naranja */
       color: white;
   }
 
   .btn-box .btn.btn-primary:hover {
-      background-color: #E54F3B; /* Darker shade on hover */
+      background-color: #E54F3B; /* Tono más oscuro al pasar el ratón */
       color: white;
   }
 
-  .btn-box .btn.btn-secondary { /* Corresponds to "Soy Toteat" style */
-      background-color: #EAE5D9; /* Beige background */
-      color: #333333; /* Dark text */
+  .btn-box .btn.btn-secondary { /* Corresponde al estilo "INICIAR SESIÓN" */
+      background-color: #EAE5D9; /* Fondo beige */
+      color: #333333; /* Texto oscuro */
   }
 
    .btn-box .btn.btn-secondary:hover {
-      background-color: #DCD7CD; /* Darker beige on hover */
+      background-color: #DCD7CD; /* Beige más oscuro al pasar el ratón */
       color: #333333;
   }
 
-  /* Remove pseudo-element effects from original style */
+  /* Quitar efectos de pseudo-elementos del estilo original */
   .btn-box .btn::before {
     display: none;
   }

@@ -1,0 +1,157 @@
+<section class="home" id="Home">
+    <div class="home-container">
+        <div class="home-content">
+            <h2>Productos</h2>
+            <h1>Nos adaptamos a todos los negocios</h1>
+            <h1 class="text2">sin importar su formato o tamaño</h1>
+            <h2 class="text3">Desliza y conoce todas las funcionalidades.</h2>
+        </div>
+        <div class="btn-box-primero">
+            <a href="Aseroria" class="btn-primero">Octén asesoría</a>
+        </div>
+    </div>
+    
+    <div class="target-cards-container">
+        <div class="target-card">
+          <img src="/Imagen 1.svg" alt="Imagen 1" class="target-card-img">
+          <div class="target-card-content">
+            <h3>Simple y moderno</h3>
+            <p>Ofrecemos una interfaz moderna, amigable y fácil de usar.</p>
+          </div>
+            <div class="btn-box-tercero">
+                <a href="Vermas1" class="btn-tercero">Ver más</a>
+            </div>
+        </div>
+      
+        <div class="target-card">
+          <img src="/Imagen 2.svg" alt="Imagen 2" class="target-card-img">
+          <div class="target-card-content">
+            <h3>Fexible</h3>
+            <p>No exigimos ningún hardware especializado. Fudo funciona en cualquier dispositivo con Windows, MAC o Linux.</p>
+          </div>
+            <div class="btn-box-cuarto">
+                <a href="Vermas2" class="btn-cuarto">Ver más</a>
+            </div>
+        </div>
+      
+        <div class="target-card">
+          <img src="/Imagen 3.svg" alt="Imagen 3" class="target-card-img">
+          <div class="target-card-content">
+            <h3>On-line</h3>
+            <p>¡No tienes que instalar ningún programa! Ingresa desde cualquier lugar, en cualquier momento y mediante cualquier dispositivo.</p>
+          </div>
+            <div class="btn-box-quinto">
+                <a href="Vermas3" class="btn-quinto">Ver más</a>
+            </div>
+        </div>
+        
+    </div>
+
+ </section>
+
+ 
+
+ <style>
+    .home {
+        background-color: #011d30;; /* Fondo gris claro */
+        padding: 5% 6%; /* Añadir algo de padding */
+    }
+    .home-container {
+        max-width: 960px; /* Limitar ancho */
+        margin: 0 auto; /* Centrar contenedor */
+        text-align: center; /* Centrar texto */
+    }
+    .home-content h2 { /* Estilo para "Productos" */
+        font-size: 2rem;
+        color: #ffffff; /* Gris más claro */
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+    .home-content h1 { /* Estilo para "Nos adaptamos..." */
+        font-size: 3rem;
+        color: #ffffff; /* Gris oscuro/negro */
+        font-weight: bold;
+        margin-bottom: -30px; /* Reducido de 5px */
+    }
+    .home-content .text2 { /* Estilo para "sin importar..." */
+        font-size: 3rem; /* Mismo tamaño que h1 */
+        color: #00ff51; /* Color rojo */
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .home-content .text3 { /* Estilo para "Desliza..." */
+        font-size: 1.8rem;
+        color: #ffffff; /* Gris medio */
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+    .btn-box-primero {
+        margin-top: 30px; /* Espacio sobre el botón */
+    }
+    .btn-primero {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #00ff51; /* Fondo oscuro */
+        color: #333; /* Texto blanco */
+        border-radius: 25px; /* Esquinas redondeadas */
+        text-decoration: none; /* Quitar subrayado */
+        font-size: 1.3rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    .btn-primero:hover {
+        background-color: #fffefe; /* Ligeramente más claro al pasar el ratón */
+    }
+
+    .target-cards-container {
+      display: flex;
+      flex-wrap: wrap;       /* Permite que se acomoden en varias filas en pantallas pequeñas */
+      gap: 20px;             /* Espacio entre tarjetas */
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    /* Cada tarjeta */
+    .target-card {
+      display: flex;               /* Layout horizontal: imagen a la izquierda y contenido a la derecha */
+      align-items: center;
+      width: 300px;                /* Ancho fijo, puedes ajustar según necesites */
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex-direction: column;
+    }
+    
+    /* Imagen de la tarjeta */
+    .target-card-img {
+      width: 100px;                /* Tamaño de la imagen */
+      height: 100px;               /* Puedes ajustarlo para que se vea bien */
+      object-fit: cover;           /* Mantiene la proporción, recortando si es necesario */
+      display: block; /* Asegura que se pueda centrar con márgenes automáticos */
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px; /* Añade margen superior */
+      margin-bottom: 10px; /* Añade margen inferior */
+    }
+    
+    /* Contenido de la tarjeta */
+    .target-card-content {
+      padding: 10px;
+    }
+    
+    .target-card-content h3 {
+      margin: 0 0 5px;
+      font-size: 18px;
+      color: #333;
+      text-align: center;
+    }
+    
+    .target-card-content p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+ </style>

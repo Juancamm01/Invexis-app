@@ -25,8 +25,8 @@ import ChangeableText from "../bodyindex/ChangeableText"
             <h2>todo en uno</h2>
             <h3>Potencia la operación de tu negocio, toma el control y aumenta las ventas</h3>
             <!--btn de como funciona  -->
-            <div class="btn-box">
-                <a href="Funciona" class="btn">¿Como funciona?</a>
+            <div class="btn-box-segundo">
+                <a href="Funciona" class="btn-segundo">¿Como funciona?</a>
             </div>
         </div>
        
@@ -96,6 +96,7 @@ import ChangeableText from "../bodyindex/ChangeableText"
     .home {
         align-items: center;
         padding: 0% 6%;
+        background-color: #011d30;
     }
 
     .home-container {
@@ -243,42 +244,58 @@ import ChangeableText from "../bodyindex/ChangeableText"
         margin-block-end: 6px;
     }
 
-    .btn-box{
+    .btn-box-segundo{
 	    display: flex;
 	    margin-left: auto;
         order: 3;
         margin-top: 5%;
     }
 
-    .btn-box .btn{
+    .btn-box-segundo .btn-segundo{
     	display: flex;
     	justify-content: center;
     	align-items: center;
-    	color: white;
+    	/* color: white; */ /* Match .btn */
+        color: white; /* Keep white text from .btn colors */
         text-decoration: none;
-        font-size: 15px;
-    	font-family: "Bruno Ace SC", serif;
+        /* font-size: 15px; */ /* Match .btn */
+        font-size: 14px; /* Restore style from beige button */
+    	/* font-family: "Bruno Ace SC", serif; */ /* Match .btn */
+        font-family: Arial, sans-serif; /* Restore style from beige button */
     	font-weight: 600;
-    	font-style: normal;
-    	border: 1px solid #00ff51;
-    	border-radius: 1px;
-    	padding: 0.5px;
-    	min-width: 187px;
-    	min-height: 48px;
-    	margin-left: 20px;
-    	transform: skew(-15deg);
+    	/* font-style: normal; */ /* Match .btn */
+    	/* border: 1px solid #00ff51; */ /* Match .btn */
+        border: none; /* Restore style from beige button */
+    	/* border-radius: 1px; */ /* Match .btn */
+        border-radius: 50px; /* Restore style from beige button */
+    	/* padding: 0.5px; */ /* Match .btn */
+        padding: 10px 30px; /* Increased horizontal padding */
+    	/* min-width: 187px; */ /* Match .btn */
+        min-width: auto; /* Restore style from beige button */
+    	/* min-height: 48px; */ /* Match .btn */
+        min-height: auto; /* Restore style from beige button */
+    	margin-left: 20px; /* Keep margin */
+    	/* transform: skew(-15deg); */ /* Match .btn */
+        transform: none; /* Restore style from beige button */
     	z-index: 1;
     	overflow: hidden;
-    	transition: .10s;
-        background-color: rgb(80, 80, 80);
+    	/* transition: .10s; */ /* Match .btn */
+        transition: background-color 0.2s ease; /* Simpler transition for color change */
+        /* background-color: rgb(80, 80, 80); */ /* Match .btn */
+        background-color: rgb(80, 80, 80); /* Keep gray background from .btn colors */
+        cursor: pointer;
     }
 
-    .btn-box .btn:hover {
-        color: #00ff51;
+    .btn-box-segundo .btn-segundo:hover {
+        /* color: #00ff51; */ /* Match .btn:hover */
+        /* background-color: rgb(80, 80, 80); */ /* Ensure background doesn't change on hover */
+        color: white; /* Keep text white on hover */
+        background-color: rgb(60, 60, 60); /* Slightly darker gray on hover */
     }
 
-    .btn-box .btn::before{
-        content: '';
+    /* Ensure pseudo-element effect is removed */
+    .btn-box-segundo .btn-segundo::before{
+        /* content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -286,11 +303,13 @@ import ChangeableText from "../bodyindex/ChangeableText"
         height: 100%;
         background: white;
         z-index: -1;
-        transition: .10s;	
+        transition: .10s; */
+        display: none;
     }
 
-    .btn-box .btn:hover::before{
-        width: 100%;
+    .btn-box-segundo .btn-segundo:hover::before{
+        /* width: 100%; */ /* Match .btn:hover::before */
+        display: none;
     }
 
     .chipccel {

@@ -1,0 +1,349 @@
+---
+// src/components/Footer.astro
+// Importar iconos si se usan como componentes o SVGs
+// import IconWhatsapp from '../icons/Whatsapp.astro';
+// import IconLinkedin from '../icons/Linkedin.astro';
+// import IconInstagram from '../icons/Instagram.astro';
+// import IconYoutube from '../icons/Youtube.astro';
+// import IconLocation from '../icons/Location.astro';
+
+const addresses = [
+  {
+    country: "Chile",
+    address: "Av. Vitacura 2771, Piso 5 Oficina 504, Las Condes, Santiago de Chile."
+  },
+  {
+    country: "Colombia",
+    address: "Carrera 11B #99-25, Torre 2 Piso 8. Wework calle 99, Bogotá."
+  },
+  {
+    country: "México",
+    address: "Av. P.º de la Reforma 222 Piso 18, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX."
+  }
+];
+
+const products = [
+  { name: "POS", href: "#" },
+  { name: "Toteat Shop", href: "#" },
+  { name: "Stock e inventario", href: "#" },
+  { name: "KDS", href: "#" },
+  { name: "Toteat Analytics", href: "#" },
+  { name: "Boleta y Factura Electrónica", href: "#" },
+  { name: "Comandera", href: "#", class: "disabled" }, // Clase para estilo 'disabled'
+  { name: "Kiosko auto atención", href: "#" },
+];
+
+const prices = [
+  { name: "Ver planes", href: "#" }
+];
+
+const aboutUs = [
+  { name: "Casos de éxito", href: "#" }
+];
+
+const resources = [
+  { name: "Foodnology", href: "#" },
+  { name: "Certificate", href: "#" }
+];
+
+const socialLinks = [
+  { name: "Whatsapp", href: "#", icon: "WA" }, // Placeholder for icon
+  { name: "LinkedIn", href: "#", icon: "IN" }, // Placeholder for icon
+  { name: "Instagram", href: "#", icon: "IG" }, // Placeholder for icon
+  { name: "Youtube", href: "#", icon: "YT" }  // Placeholder for icon
+];
+---
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-section addresses">
+      {addresses.map(item => (
+        <div class="address-block">
+          <h6>{item.country}</h6>
+          <p>{item.address}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="footer-right-group">
+      <div class="footer-section links prices-about-resources">
+        <div class="sub-section">
+          <h6>Precios</h6>
+          <ul>
+            {prices.map(link => (
+              <li><a href={link.href}>{link.name}</a></li>
+            ))}
+          </ul>
+        </div>
+         <div class="sub-section">
+          <h6>Nosotros</h6>
+          <ul>
+            {aboutUs.map(link => (
+              <li><a href={link.href}>{link.name}</a></li>
+            ))}
+          </ul>
+        </div>
+         <div class="sub-section">
+          <h6>Recursos</h6>
+          <ul>
+            {resources.map(link => (
+              <li><a href={link.href}>{link.name}</a></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-section social-buttons">
+         <div class="sub-section buttons">
+           <a href="#" class="btn btn-outline">Ingresar</a>
+           <a href="#" class="btn btn-outline">Soporte</a>
+         </div>
+         <div class="sub-section social">
+          <h6>¡Síguenos!</h6>
+          <div class="social-icons">
+            {socialLinks.map(link => (
+              <a href={link.href} aria-label={link.name} class="social-icon">{link.icon /* Placeholder */}</a>
+              // Reemplazar {link.icon} con <IconComponent /> si usas componentes de iconos
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="country-selector">
+      <span class="icon-location">📍</span> {/* Placeholder for location icon */}
+      <span>País: Chile</span> {/* Hacer dinámico si es necesario */}
+    </div>
+    <div class="privacy-link">
+      <a href="/privacy">Política de privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .footer-section {
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+
+  /* Adjust flex basis for column layout */
+  .footer-section.addresses { flex-basis: 25%; flex-shrink: 0; }
+  .footer-section.products { flex-basis: 25%; flex-shrink: 0; }
+  .footer-right-group {
+      display: flex;
+      flex-basis: 45%;
+      justify-content: center;
+      gap: 30px;
+      flex-shrink: 0;
+  }
+  .footer-section.prices-about-resources { flex-basis: auto; margin-bottom: 0; text-align: left; }
+  .footer-section.social-buttons { flex-basis: auto; margin-bottom: 0; }
+
+
+  .footer-section h6 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000;
+    margin: 0;
+    text-align: left;
+  }
+
+  /* Centrar específicamente el título de Síguenos */
+  .sub-section.social h6 {
+      text-align: center;
+      margin-bottom: 15px; /* Restaurar margen inferior para h6 */
+  }
+
+  .address-block {
+    margin-bottom: 20px;
+  }
+   .address-block p {
+    font-size: 13px;
+    color: #555;
+    margin: 0;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-section li {
+    margin-bottom: 25px;
+  }
+
+  .footer-section a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-section a:hover {
+    color: #007bff; /* O el color de hover deseado */
+    text-decoration: underline;
+  }
+   .footer-section a.disabled {
+     color: #aaa; /* Estilo para enlaces deshabilitados */
+     pointer-events: none;
+     cursor: default;
+   }
+
+  .prices-about-resources .sub-section {
+      margin-bottom: 25px;
+  }
+
+  .social-buttons .sub-section {
+    margin-bottom: 25px;
+  }
+
+  .buttons .btn {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 8px 20px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      text-align: center;
+      font-weight: 500;
+      color: #333;
+      background-color: #fff;
+      min-width: 120px; /* Ancho mínimo para botones */
+  }
+   .buttons .btn:hover {
+      background-color: #f8f8f8;
+      border-color: #aaa;
+      text-decoration: none; /* Evitar subrayado en hover de botones */
+   }
+
+   .sub-section.buttons {
+     text-align: center;
+   }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre iconos */
+  }
+
+  .social-icon {
+    display: inline-block;
+    width: 32px; /* Tamaño placeholder */
+    height: 32px; /* Tamaño placeholder */
+    background-color: #eee; /* Placeholder */
+    border-radius: 4px; /* Placeholder */
+    text-align: center; /* Placeholder */
+    line-height: 32px; /* Placeholder */
+    font-weight: bold; /* Placeholder */
+     color: #555; /* Placeholder */
+  }
+   /* Estilos específicos por red social (si se usan clases o iconos) */
+   .social-icon[aria-label="Whatsapp"] { background-color: #25D366; color: white;}
+   .social-icon[aria-label="LinkedIn"] { background-color: #0A66C2; color: white;}
+   .social-icon[aria-label="Instagram"] { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); color: white;}
+   .social-icon[aria-label="Youtube"] { background-color: #FF0000; color: white;}
+
+
+  .footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 13px;
+    color: #555;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .country-selector {
+    display: flex;
+    align-items: center;
+  }
+   .country-selector .icon-location {
+     margin-right: 5px;
+     /* Estilos para el icono de ubicación */
+   }
+
+  .privacy-link a {
+    color: #555;
+  }
+  .privacy-link a:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  /* Media Queries para Responsividad (Opcional, ajustar según necesidad) */
+  @media (max-width: 992px) {
+    .footer-main {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .footer-section {
+      flex-basis: 100% !important;
+      padding: 0;
+      margin-bottom: 20px;
+      text-align: center !important;
+    }
+     .footer-right-group {
+       flex-basis: 100% !important;
+       flex-direction: column;
+       align-items: center;
+       gap: 0;
+     }
+     .footer-section.social-buttons {
+       text-align: center;
+     }
+     .social-buttons .sub-section {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+     }
+    .social-icons {
+      justify-content: center;
+    }
+     .buttons .btn {
+       display: inline-block;
+       margin: 0 5px 10px;
+     }
+     .footer-bottom {
+       flex-direction: column;
+       gap: 10px;
+     }
+  }
+
+   @media (max-width: 768px) {
+       .buttons .btn {
+         display: block;
+         margin: 0 auto 10px;
+       }
+   }
+
+   /* Asegurar que el contenedor de social sí esté centrado */
+   .sub-section.social {
+     text-align: center;
+   }
+
+</style>
