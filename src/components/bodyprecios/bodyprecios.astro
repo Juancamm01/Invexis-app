@@ -1,0 +1,182 @@
+<section class="home" id="Home">
+    <div class="home-container">
+        <div class="home-content">
+            <h2>Nuestros Planes</h2>
+            <h1>Precios Flexibles</h1>
+            <h1 class="text2">para cada necesidad</h1>
+            <h2 class="text3">Elige el plan que mejor se adapta a ti.</h2>
+        </div>
+    </div>
+
+    <div class="target-cards-container">
+        <div class="target-card">
+          <img src="/Imagen 1.svg" alt="Plan Básico" class="target-card-img">
+          <div class="target-card-content">
+            <h3>Plan Básico</h3>
+            <p>Ideal para pequeños negocios.</p>
+            <p class="price">$19.99/mes</p>
+          </div>
+            <div class="btn-box-tercero">
+                <a href="ContratarBasico" class="btn-tercero">Contratar</a>
+            </div>
+        </div>
+
+        <div class="target-card">
+          <img src="/Imagen 2.svg" alt="Plan Profesional" class="target-card-img">
+          <div class="target-card-content">
+            <h3>Plan Profesional</h3>
+            <p>Perfecto para negocios en crecimiento.</p>
+            <p class="price">$49.99/mes</p>
+          </div>
+            <div class="btn-box-cuarto">
+                <a href="ContratarProfesional" class="btn-cuarto">Contratar</a>
+            </div>
+        </div>
+
+        <div class="target-card">
+          <img src="/Imagen 3.svg" alt="Plan Empresa" class="target-card-img">
+          <div class="target-card-content">
+            <h3>Plan Empresa</h3>
+            <p>Soluciones completas para grandes empresas.</p>
+            <p class="price">$99.99/mes</p>
+          </div>
+            <div class="btn-box-quinto">
+                <a href="ContratarEmpresa" class="btn-quinto">Contratar</a>
+            </div>
+        </div>
+
+    </div>
+
+ </section>
+
+
+
+ <style>
+    .home {
+        background-color: #f8f9fa; /* Fondo gris claro */
+        padding: 5% 6%; /* Añadir algo de padding */
+    }
+    .home-container {
+        max-width: 960px; /* Limitar ancho */
+        margin: 0 auto 40px auto; /* Centrar contenedor y añadir margen inferior */
+        text-align: center; /* Centrar texto */
+    }
+    .home-content h2 { /* Estilo para "Nuestros Planes" */
+        font-size: 2rem;
+        color: #6c757d; /* Gris medio */
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+    .home-content h1 { /* Estilo para "Precios Flexibles" */
+        font-size: 3rem;
+        color: #343a40; /* Gris oscuro */
+        font-weight: bold;
+        margin-bottom: -10px; /* Ajuste para acercar al siguiente h1 */
+    }
+    .home-content .text2 { /* Estilo para "para cada necesidad" */
+        font-size: 3rem; /* Mismo tamaño que h1 */
+        color: #007bff; /* Color azul primario */
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .home-content .text3 { /* Estilo para "Elige el plan..." */
+        font-size: 1.8rem;
+        color: #6c757d; /* Gris medio */
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .target-cards-container {
+      display: flex;
+      flex-wrap: wrap;       /* Permite que se acomoden en varias filas en pantallas pequeñas */
+      gap: 30px;             /* Espacio entre tarjetas aumentado */
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* Cada tarjeta */
+    .target-card {
+      display: flex;               /* Layout vertical */
+      flex-direction: column;      /* Contenido apilado verticalmente */
+      align-items: center;         /* Centrar contenido horizontalmente */
+      width: 300px;                /* Ancho fijo */
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra más pronunciada */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+      padding-bottom: 20px; /* Padding inferior para separar el botón */
+    }
+
+    .target-card:hover {
+        transform: translateY(-5px); /* Efecto levantar al pasar el ratón */
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Imagen de la tarjeta */
+    .target-card-img {
+      width: 120px;                /* Tamaño de la imagen aumentado */
+      height: 120px;
+      object-fit: contain;         /* Asegura que la imagen se vea completa */
+      display: block;
+      margin: 25px auto 15px auto; /* Márgenes ajustados */
+    }
+
+    /* Contenido de la tarjeta */
+    .target-card-content {
+      padding: 0 15px 10px 15px; /* Padding horizontal y algo inferior */
+      text-align: center;       /* Centrar todo el texto */
+      width: 100%;              /* Ocupar todo el ancho */
+      flex-grow: 1;             /* Permite que el contenido crezca */
+    }
+
+    .target-card-content h3 {
+      margin: 0 0 10px;          /* Margen inferior aumentado */
+      font-size: 1.4rem;         /* Tamaño de fuente aumentado */
+      color: #343a40;           /* Gris oscuro */
+    }
+
+    .target-card-content p {
+      margin: 0 0 10px;          /* Margen inferior para descripción */
+      font-size: 1rem;           /* Tamaño de fuente estándar */
+      color: #666;
+    }
+
+    /* Estilo para el precio */
+    .target-card-content .price {
+        font-size: 1.8rem;         /* Tamaño más grande */
+        font-weight: bold;
+        color: #011d30;           /* Color principal oscuro */
+        margin-top: 15px;          /* Espacio sobre el precio */
+        margin-bottom: 20px;       /* Espacio debajo del precio */
+    }
+
+    /* Contenedor del botón */
+    .btn-box-tercero, .btn-box-cuarto, .btn-box-quinto {
+        margin-top: auto;          /* Empuja el botón al final si es necesario (aunque con flex-direction column no es tan crítico) */
+        width: auto;               /* Ajustar ancho automáticamente */
+        padding-top: 10px;         /* Espacio sobre el botón */
+    }
+
+    /* Estilo botones */
+    .btn-tercero, .btn-cuarto, .btn-quinto {
+        display: inline-block;
+        padding: 12px 25px;        /* Padding aumentado */
+        background-color: #007bff; /* Azul primario */
+        color: #ffffff;           /* Texto blanco */
+        border: none;
+        border-radius: 25px;       /* Más redondeado */
+        text-decoration: none;
+        font-size: 1.1rem;         /* Tamaño de fuente aumentado */
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        cursor: pointer;
+    }
+
+    .btn-tercero:hover, .btn-cuarto:hover, .btn-quinto:hover {
+        background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+        transform: scale(1.05);   /* Ligero aumento de tamaño */
+    }
+
+ </style>
